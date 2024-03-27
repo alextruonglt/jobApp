@@ -4,7 +4,7 @@ import Logo from "../components/Logo"
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage"
 import { toast } from "react-toastify"
 import customFetch from "../utils/customFetch"
-
+import SubmitBtn from "../components/SubmitBtn"
 export const action = async ({ request }) => {
   const formData = await request.formData()
   const data = Object.fromEntries(formData)
@@ -20,9 +20,6 @@ export const action = async ({ request }) => {
 }
 
 const Register = () => {
-  const navigation = useNavigation()
-  console.log(navigation)
-  const isSubmitting = navigation.state === "submitting"
   return (
     <Wrapper>
       <Form method="post" className="form">
@@ -35,9 +32,7 @@ const Register = () => {
 
         <FormRow type="password" name="password" />
 
-        <button type="submit" disabled={isSubmitting} className="btn btn-block">
-          {isSubmitting ? "submitting..." : "submit"}
-        </button>
+        <SubmitBtn />
         <p>
           Already a member?
           <Link to="/login" className="member-btn">

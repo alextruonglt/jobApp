@@ -6,7 +6,7 @@ import { Form, useNavigation, redirect } from "react-router-dom"
 import { toast } from "react-toastify"
 import customFetch from "../utils/customFetch.js"
 import FormRowSelect from "../components/FormRowSelect.js"
-
+import SubmitBtn from "../components/SubmitBtn.js"
 export const action = async ({ request }) => {
   const formData = await request.formData()
   const data = Object.fromEntries(formData)
@@ -23,8 +23,6 @@ export const action = async ({ request }) => {
 
 const AddJob = () => {
   const { user } = useOutletContext()
-  const navigation = useNavigation()
-  const isSubmitting = navigation.state === "submitting"
 
   return (
     <Wrapper>
@@ -51,14 +49,7 @@ const AddJob = () => {
             defaultValue={JOB_TYPE.FULL_TIME}
             list={Object.values(JOB_TYPE)}
           />
-
-          <button
-            type="submit"
-            className="btn btn-block form-btn "
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "submitting..." : "submit"}
-          </button>
+          <SubmitBtn formBtn />
         </div>
       </Form>
     </Wrapper>
