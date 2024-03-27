@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Wrapper = styled.nav`
   height: var(--nav-height);
@@ -29,6 +29,8 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
     width: 100px;
+    //
+    height: 1px;
   }
   .btn-container {
     display: flex;
@@ -47,5 +49,5 @@ const Wrapper = styled.nav`
       display: block;
     }
   }
-`;
-export default Wrapper;
+`
+export default Wrapper

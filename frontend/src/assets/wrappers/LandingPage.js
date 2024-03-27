@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Wrapper = styled.section`
   nav {
@@ -37,6 +37,10 @@ const Wrapper = styled.section`
   .btn {
     padding: 0.75rem 1rem;
   }
+  .logo {
+    height: 100px;
+  }
+
   @media (min-width: 992px) {
     .page {
       grid-template-columns: 1fr 400px;
@@ -46,5 +50,5 @@ const Wrapper = styled.section`
       display: block;
     }
   }
-`;
-export default Wrapper;
+`
+export default Wrapper

@@ -13,13 +13,14 @@ const Landing = () => {
         {/* info */}
         <div className="info">
           <h1>
-            job <span>tracking</span> app
+            The only job <span>tracking</span> app you need
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+            Embark on your job search journey with Job Quest, the all-in-one
+            application designed to streamline your job hunting process. Whether
+            you're actively seeking new opportunities or passively exploring the
+            market, Job Quest empowers you to manage and organize your job
+            applications effortlessly.
           </p>
           <Link to="/register" className="btn register-link">
             Register
