@@ -29,8 +29,6 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
     width: 100px;
-    //
-    height: 1px;
   }
   .btn-container {
     display: flex;
