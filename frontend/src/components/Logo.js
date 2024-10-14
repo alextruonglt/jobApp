@@ -1,7 +1,8 @@
-// import logo from "../assets/images/newLogo2.png"
+// Logo.js
 import logo from "../assets/images/logo.png"
+
 const Logo = () => {
-  return <img src={logo} alt="jobify" className="logo" />
+	return <img src={logo} alt="Logo" className="logo" />
 }
 
 export default Logo

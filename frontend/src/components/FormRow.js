@@ -1,29 +1,19 @@
-const FormRow = ({ type, name, labelText, defaultValue, onChange }) => {
+// FormRow.js
+const FormRow = ({ type, name, labelText, value, onChange }) => {
 	return (
 		<div className="form-row">
 			<label htmlFor={name} className="form-label">
 				{labelText || name}
 			</label>
-			{type === "textarea" ? (
-				<textarea
-					id={name}
-					name={name}
-					className="form-textarea"
-					defaultValue={defaultValue}
-					onChange={onChange}
-					rows="3" // Set default rows
-				/>
-			) : (
-				<input
-					type={type}
-					id={name}
-					name={name}
-					className="form-input"
-					defaultValue={defaultValue}
-					onChange={onChange}
-					required
-				/>
-			)}
+			<input
+				type={type}
+				name={name}
+				id={name}
+				value={value}
+				onChange={onChange}
+				className="form-input"
+				required
+			/>
 		</div>
 	)
 }

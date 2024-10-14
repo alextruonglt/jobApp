@@ -1,15 +1,14 @@
-import { useNavigation } from "react-router-dom"
-const SubmitBtn = ({ formBtn }) => {
-  const navigation = useNavigation()
-  const isSubmitting = navigation.state === "submitting"
-  return (
-    <button
-      type="submit"
-      className={`btn btn-block ${formBtn && "form-btn"}`}
-      disabled={isSubmitting}
-    >
-      {isSubmitting ? "submitting..." : "submit"}
-    </button>
-  )
+// SubmitBtn.js
+const SubmitBtn = ({ formBtn, disabled }) => {
+	return (
+		<button
+			type="submit"
+			className={`btn btn-block ${formBtn && "form-btn"}`}
+			disabled={disabled}
+		>
+			Submit
+		</button>
+	)
 }
+
 export default SubmitBtn
