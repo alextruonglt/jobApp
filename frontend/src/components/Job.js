@@ -4,7 +4,6 @@ import Wrapper from "../assets/wrappers/Job"
 import JobInfo from "./JobInfo"
 import day from "dayjs"
 import advancedFormat from "dayjs/plugin/advancedFormat"
-import { useState } from "react" // Use state for toggling description visibility
 day.extend(advancedFormat)
 
 const Job = ({
@@ -15,10 +14,8 @@ const Job = ({
 	jobType,
 	createdAt,
 	jobStatus,
-	jobDescription, // Add jobDescription to props
-	jobURL, // Add jobURL to props
+	jobURL, // Keep jobURL as it might still be needed
 }) => {
-	const [showDescription, setShowDescription] = useState(false) // Manage visibility of description
 	const date = day(createdAt).format("MMM Do, YYYY")
 
 	return (
@@ -52,22 +49,7 @@ const Job = ({
 							Delete
 						</button>
 					</Form>
-					{jobDescription && jobDescription !== "No description available" && (
-						<button
-							type="button"
-							className="btn description-btn" // Add this class for consistent styling
-							onClick={() => setShowDescription(!showDescription)}
-						>
-							{showDescription ? "Hide Description" : "Show Description"}
-						</button>
-					)}
 				</footer>
-
-				{showDescription && (
-					<div className="job-description">
-						<p>{jobDescription}</p>
-					</div>
-				)}
 			</div>
 		</Wrapper>
 	)

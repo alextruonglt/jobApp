@@ -50,11 +50,7 @@ const AddJob = () => {
 						list={Object.values(JOB_TYPE)}
 					/>
 					<FormRow type="text" name="jobURL" labelText="Job URL" />
-					<FormRow
-						type="textarea" // Use textarea for job description
-						name="jobDescription"
-						labelText="Job Description"
-					/>
+
 					<SubmitBtn formBtn />
 				</div>
 			</Form>

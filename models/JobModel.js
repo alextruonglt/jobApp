@@ -23,10 +23,7 @@ const JobSchema = new mongoose.Schema(
 			type: mongoose.Types.ObjectId,
 			ref: "User",
 		},
-		jobDescription: {
-			type: String,
-			default: "No description available",
-		},
+
 		jobURL: {
 			type: String,
 			default: "No URL provided", // No validation, can accept any string
